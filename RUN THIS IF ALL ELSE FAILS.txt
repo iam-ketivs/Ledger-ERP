@@ -1,0 +1,35 @@
+IF THE BATCH FILE KEEPS FAILING
+===============================
+
+You know where ISCC.exe is. Skip my script entirely.
+
+Open Command Prompt (not PowerShell - press Windows key, type cmd),
+then paste these two lines one at a time:
+
+    cd /d "C:\ERPEXE\erp"
+
+    "C:\Users\keert\AppData\Local\Programs\Inno Setup 7\ISCC.exe" installer.iss
+
+That is exactly what the batch file is trying to do. If it works, you
+will see:
+
+    Inno Setup 7 Compiler
+    Compiling...
+    Successful compile
+
+and installer_out\LedgerSetup-5.8.exe will be there.
+
+
+IN POWERSHELL INSTEAD
+=====================
+PowerShell needs an & in front of a quoted path:
+
+    cd "C:\ERPEXE\erp"
+
+    & "C:\Users\keert\AppData\Local\Programs\Inno Setup 7\ISCC.exe" installer.iss
+
+
+WHAT IF IT COMPLAINS ABOUT A MISSING FILE
+=========================================
+It will name the file. The likely one is dist\Ledger.exe - build that
+first with build_exe.bat, then run the command above.

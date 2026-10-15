@@ -1,0 +1,12 @@
+# Packages needed only to BUILD the desktop .exe.
+# Downloaded once at build time; the finished exe runs fully offline.
+#
+# Deliberately NOT pinned to exact versions. Pinning Pillow to 10.4.0 broke the build
+# on Python 3.14, which has no prebuilt Pillow below version 12 - pip then tried to
+# compile it from source and failed. Minimum versions only, so pip can pick whatever
+# actually has a ready-made package for your Python.
+Flask>=3.0
+waitress>=3.0
+pystray>=0.19
+Pillow>=10.0
+openpyxl>=3.1        # Excel export - pure Python, installs on any Python version

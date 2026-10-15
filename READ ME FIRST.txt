@@ -1,0 +1,111 @@
+LEDGER v4.6  -  Balance Sheet
+31 August 2026
+
+
+WHAT IT IS
+==========
+The one thing that spreadsheet template had which Ledger did not: a
+formal balance sheet, in the shape a bank expects.
+
+Money -> Balance Sheet. Two columns, generously spaced, printable to A4.
+
+    ASSETS                          LIABILITIES & EQUITY
+    Current assets                  Current liabilities
+      Cash in hand                    Owed to suppliers
+      Money owed by customers         Advances on undelivered orders
+      Advances to staff               Customer credit balances
+    Stock                           Owner's equity
+      Raw material (rolls)            Owner's capital
+      Finished goods                  Retained earnings
+    -------------------------       -------------------------
+    TOTAL ASSETS                    TOTAL LIABILITIES & EQUITY
+
+Pick any date with "As at" - useful when a bank asks for the position at
+the end of a particular month.
+
+
+IT BALANCES, AND THAT IS THE POINT
+==================================
+A balance sheet that does not balance is worthless. Rather than plugging
+a difference, owner's equity is worked out as assets minus liabilities
+and then split between what you put in and what the trading has earned.
+The two sides agree by construction.
+
+Tested through every kind of entry - a credit sale, a credit purchase, a
+supplier payment, an expense, an order advance. Both sides matched to the
+paisa every time.
+
+
+THREE NOTES UNDERNEATH
+======================
+  WORKING CAPITAL   what would be left if every short-term debt were
+                    settled today from cash, receivables and stock
+  CURRENT RATIO     short-term assets against short-term debts. Banks
+                    look for 1.5 or better; below 1.0 means the debts
+                    exceed what could cover them
+  RETAINED EARNINGS every rupee the trading has earned since Ledger
+                    began, less every expense
+
+Your current ratio is around 0.59, which is low - your suppliers are
+owed considerably more than your cash and stock could cover today. Worth
+knowing before a bank tells you.
+
+
+HONEST ABOUT WHAT IT IS NOT
+===========================
+A note on the sheet itself says so plainly: drawn from Ledger's records
+and not independently audited, stock at weighted average cost, no
+provision for depreciation on equipment or for doubtful debts.
+
+Say that to a bank up front and it reads as competence. Let them
+discover it and it reads as something else.
+
+
+WHY NOT USE THE SPREADSHEET
+===========================
+That template is a manual form built for a software company - MRR,
+hosting fees, implementation revenue. Every quarter you would retype
+figures out of Ledger into it, and it would be stale the next day.
+
+This reads your own records each time you open it. Nothing to fill in,
+nothing to keep up to date.
+
+
+WHO CAN SEE IT
+==============
+You only. It shows what you owe, what you are worth and what you have
+drawn out.
+
+
+TESTED
+======
+  balances exactly on your real data             PASS
+  still balances after a credit sale             PASS
+  after a credit purchase                        PASS
+  after paying a supplier                        PASS
+  after an expense                               PASS
+  after taking an order advance                  PASS
+  any as-at date, and a nonsense one             PASS
+  managers, purchase clerks and staff blocked    PASS
+  all pages and all exports                      PASS
+
+
+INSTALL
+=======
+1. Rename your current "erp" folder to "erp-old". Keep it.
+2. Put LedgerApp in its place, renamed "erp".
+3. Create a folder inside called "instance".
+4. Copy YOUR CURRENT erp.db into it.
+5. Copy instance\uploads across as well.
+6. Run build_exe.bat.
+7. Settings should say v4.6.
+
+No database change.
+
+
+ONE THING TO REMEMBER
+=====================
+Your finished goods and several suppliers are still not entered, and
+wages are dated to when you pay rather than when they were earned. The
+balance sheet inherits both. Fix those and this becomes a document you
+could hand to a bank without hesitating.

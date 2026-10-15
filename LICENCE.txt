@@ -1,0 +1,17 @@
+LEDGER
+Kalyani Paper Bag Industries
+
+This software is provided as it is, without any warranty. It keeps your
+business records on your own computer and sends nothing anywhere.
+
+YOUR DATA IS YOURS. It is stored on this machine only, in a folder you can
+open, copy and back up yourself. Nothing is uploaded, and there is no
+account, no subscription and no internet connection required to use it.
+
+BACK IT UP. Settings has a "Download a copy" button. Use it weekly and keep
+the copy somewhere other than this computer. A backup on the same machine is
+no help when the machine itself fails.
+
+By installing you accept that the author is not liable for any loss arising
+from its use. Check your figures against your own records, as you would with
+any book-keeping.
